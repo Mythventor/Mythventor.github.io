@@ -53,12 +53,28 @@ const Sidenav = () => {
                 ''
             )
         }
-
+        {/* Create a menu from the left side (computer mode)*/}
         <div className='md:block hidden fixed top-[25%] z-10'>
             <div className='flex flex-col'>
+                {/* Create a menu option for Home page (computer mode)*/}
                 <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineHome size={20}/>
-
+                </a>
+                {/* Create a menu option for Work page (computer mode)*/}
+                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <GrProjects size={20}/>
+                </a>
+                {/* Create a menu option for Project page (computer mode)*/}
+                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <AiOutlineProject size={20}/>
+                </a>
+                {/* Create a menu option for Resume page (computer mode)*/}
+                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <BsPerson size={20}/>
+                </a>
+                {/* Create a menu option for Contact page (computer mode)*/}
+                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <AiOutlineMail size={20}/>
                 </a>
             </div>
         </div>
