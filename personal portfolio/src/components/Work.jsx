@@ -7,7 +7,7 @@ const data = [
         year: 2020,
         title: 'STEM Scholar',
         duration: '1 Years',
-        details: 'gardening etc etc etc'
+        details: 'gardening etc etc etcgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc etgardening etc etc et'
     },
     {
         year: 2019,
