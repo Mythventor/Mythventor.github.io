@@ -19,3 +19,5 @@ const WorkItem = ({year, title, duration, details}) =>{
 };
 
 export default WorkItem
+
+
