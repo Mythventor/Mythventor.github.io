@@ -25,13 +25,13 @@ const Sidenav = () => {
 
 
                     {/* Create a menu option for Work page (phone mode)*/}
-                    <a href='#main' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+                    <a href='#work' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                         <GrProjects size={20}/>
                         <span className='pl-4'>Work</span>
                     </a>
 
                     {/* Create a menu option for Project page (phone mode)*/}
-                    <a href='#main' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+                    <a href='#project' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                         <AiOutlineProject size={20}/>
                         <span className='pl-4'>Project</span>
                     </a>
@@ -43,7 +43,7 @@ const Sidenav = () => {
                     </a>
 
                     {/* Create a menu option for Contact page (phone mode)*/}
-                    <a href='#main' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+                    <a href='#contact' className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                         <AiOutlineMail size={20}/>
                         <span className='pl-4'>Contact</span>
                     </a>
@@ -61,11 +61,11 @@ const Sidenav = () => {
                     <AiOutlineHome size={20}/>
                 </a>
                 {/* Create a menu option for Work page (computer mode)*/}
-                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <a href='#work' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <GrProjects size={20}/>
                 </a>
                 {/* Create a menu option for Project page (computer mode)*/}
-                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <a href='#project' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineProject size={20}/>
                 </a>
                 {/* Create a menu option for Resume page (computer mode)*/}
@@ -73,7 +73,7 @@ const Sidenav = () => {
                     <BsPerson size={20}/>
                 </a>
                 {/* Create a menu option for Contact page (computer mode)*/}
-                <a href='#main' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <a href='#contact' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail size={20}/>
                 </a>
             </div>
