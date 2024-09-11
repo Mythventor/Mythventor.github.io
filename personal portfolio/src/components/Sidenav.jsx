@@ -16,7 +16,7 @@ const Sidenav = () => {
         {
             nav ? (
                 <div> 
-                    <a href=""></a>
+                    
                 </div>
             )
             :(
