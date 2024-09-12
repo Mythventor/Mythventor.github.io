@@ -64,7 +64,7 @@ const Sidenav = () => {
                     <GrProjects size={20}/>
                 </a>
                 {/* Create a menu option for Project page (computer mode)*/}
-                <a href='#Project' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                <a href='#project' className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineProject size={20}/>
                 </a>
                 {/* Create a menu option for Resume page (computer mode)*/}

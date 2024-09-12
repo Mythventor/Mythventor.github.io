@@ -1,13 +1,14 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import {FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import CoverPicture from '/src/assets/Cover.jpg'
 
 const main = () => {
   return (
 
     <div id='main'>
-        {/* insert image in main page (scale-x-[-1] -> Flip image)*/}
-        <img className='w-full h-screen object-cover object-left scale-x-[-1]' src="https://images.unsplash.com/photo-1502325966718-85a90488dc29?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        {/* insert image in main page ( scale-x-[-1] -> Flip image)*/}
+        <img className='w-full h-screen object-cover object-left' src={CoverPicture}>
         </img>
 
         {/* Create the white shadow screen effect*/}
@@ -28,6 +29,8 @@ const main = () => {
                     'Chess lover',
                     2000, // wait 2s 
                     'Tech Enthusiast',
+                    2000, // wait 2s 
+                    'baobei',
                     2000 // wait 2s 
                     ]}
             wrapper="span"
@@ -37,10 +40,17 @@ const main = () => {
         </h2>
         
         <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-            <FaTwitter className='cursor-pointer' size ={20}></FaTwitter>
-            <FaFacebookF className='cursor-pointer' size ={20}></FaFacebookF>
-            <FaInstagram className='cursor-pointer' size ={20} ></FaInstagram>
-            <FaLinkedinIn className='cursor-pointer' size ={20} ></FaLinkedinIn>
+            <a href='https://x.com/MengpangXing'>
+            <FaTwitter  className='cursor-pointer' size ={20}></FaTwitter></a>
+
+            <a href="https://www.facebook.com/mengpang.xing?mibextid=LQQJ4d">
+            <FaFacebookF className='cursor-pointer' size ={20}></FaFacebookF></a>
+
+            <a href="https://www.instagram.com/mengpangxing">
+            <FaInstagram className='cursor-pointer' size ={20} ></FaInstagram></a>
+
+            <a href="https://www.linkedin.com/in/mengpang-xing?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <FaLinkedinIn className='cursor-pointer' size ={20} ></FaLinkedinIn></a>
         </div>
 
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
-import SnakeGameProjectImg from '/Users/mengpangxing/Documents/GitHub/Mythventor.github.io/personal portfolio/src/assets/SnakeGameProject.jpg'
-
+import SnakeGameProjectImg from '/src/assets/SnakeGameProject.jpg'
+import SpeechRecognitionProjectImg from '/src/assets/SpeechRecognitionProject.png'
 const Project = () => {
   return (
     <div id='project' className='max-w-[1048px] m-auto md:pl-20 p-4 py-16'>
@@ -14,7 +14,7 @@ const Project = () => {
 
         <div className='grid sm:grid-cols-2 gap-12'>
             <ProjectItem img={SnakeGameProjectImg} title='Snake Game' ProgrammingLanguage='DrRacket' ProjectLink='https://github.com/Mythventor/SnakeGame.git'></ProjectItem>
-            <ProjectItem img={SnakeGameProjectImg} title='Speech Recognition App' ProgrammingLanguage='Python' ProjecyLink='https://github.com/Mythventor/Voice-To-Text.git'> </ProjectItem>
+            <ProjectItem img={SpeechRecognitionProjectImg} title='Speech Recognition App' ProgrammingLanguage='Python' ProjecyLink='https://github.com/Mythventor/Voice-To-Text.git'> </ProjectItem>
             <ProjectItem img={SnakeGameProjectImg} title='Mather HS Chess Website' ProgrammingLanguage='HTML+CSS+JS' ProjecyLink='https://github.com/Mythventor/mather-chess.git'></ProjectItem>
 
         </div>
