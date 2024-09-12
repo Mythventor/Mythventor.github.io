@@ -8,7 +8,7 @@ const main = () => {
 
     <div id='main'>
         {/* insert image in main page ( scale-x-[-1] -> Flip image)*/}
-        <img className='w-full h-screen object-cover object-left' src={CoverPicture}>
+        <img className='w-full h-screen object-cover object-left' src='https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'>
         </img>
 
         {/* Create the white shadow screen effect*/}
@@ -24,7 +24,7 @@ const main = () => {
                 sequence={[
                     'developer',
                     2000, // wait 2s 
-                    'CS student in NorthwesternU',
+                    'CS student in Northwestern',
                     2000, // wait 2s 
                     'Chess lover',
                     2000, // wait 2s 
