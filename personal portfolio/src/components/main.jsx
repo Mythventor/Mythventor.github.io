@@ -16,10 +16,10 @@ const main = () => {
         
 
         <div className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
-            <h1 className='sm:text-5xl text-4xl font-bold text-gray-800'>I'm Mengpang Xing</h1>
+            <h1 className='sm:text-5xl text-4xl font-industry font-bold text-gray-800'>I'm Mengpang Xing</h1>
             {/* React-type-animation package (npm install react-type-animation)
             https://www.npmjs.com/package/react-type-animation */}
-            <h2 className='flex sm:text-3xl text-2xl pt-4 text-gray-800'>I'm a
+            <h2 className='flex sm:text-3xl text-2xl pt-4 text-[#0092ff]'>I'm a
             <TypeAnimation
                 sequence={[
                     'developer',
@@ -37,7 +37,7 @@ const main = () => {
             repeat={Infinity}/>
         </h2>
         
-        <div className='flex justify-between pt-6 max-w-[200px] w-full'>
+        <div className='flex text-[#193144] justify-between pt-6 max-w-[200px] w-full'>
             <a href='https://x.com/MengpangXing'>
             <FaTwitter  className='cursor-pointer' size ={20}></FaTwitter></a>
 

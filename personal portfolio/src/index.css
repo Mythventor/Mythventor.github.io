@@ -6,3 +6,11 @@
 * {
     scroll-behavior: smooth;
 }
+
+
+@font-face {
+    font-family: 'Industry';
+    src: url('/IndustryTest-Bold.otf') format('opentype'); 
+    font-weight: bold;
+    font-style: normal;
+  }
