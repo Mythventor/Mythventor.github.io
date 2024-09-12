@@ -1,7 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import {FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
-import CoverPicture from '/src/assets/Cover.jpg'
+
 
 const main = () => {
   return (
