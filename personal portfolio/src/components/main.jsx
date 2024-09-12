@@ -29,8 +29,6 @@ const main = () => {
                     'Chess lover',
                     2000, // wait 2s 
                     'Tech Enthusiast',
-                    2000, // wait 2s 
-                    'baobei',
                     2000 // wait 2s 
                     ]}
             wrapper="span"
