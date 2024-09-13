@@ -38,16 +38,16 @@ const main = () => {
         </h2>
         
         <div className='flex text-[#193144] justify-between pt-6 max-w-[200px] w-full'>
-            <a href='https://x.com/MengpangXing'>
+            <a href='https://x.com/MengpangXing' target="_blank">
             <FaTwitter  className='cursor-pointer' size ={20}></FaTwitter></a>
 
-            <a href="https://www.facebook.com/mengpang.xing?mibextid=LQQJ4d">
+            <a href="https://www.facebook.com/mengpang.xing?mibextid=LQQJ4d" target="_blank">
             <FaFacebookF className='cursor-pointer' size ={20}></FaFacebookF></a>
 
-            <a href="https://www.instagram.com/mengpangxing">
+            <a href="https://www.instagram.com/mengpangxing" target="_blank">
             <FaInstagram className='cursor-pointer' size ={20} ></FaInstagram></a>
 
-            <a href="https://www.linkedin.com/in/mengpang-xing?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+            <a href="https://www.linkedin.com/in/mengpang-xing?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
             <FaLinkedinIn className='cursor-pointer' size ={20} ></FaLinkedinIn></a>
         </div>
 
