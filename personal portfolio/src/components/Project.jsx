@@ -1,6 +1,8 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
 import SnakeGameProjectImg from '/src/assets/SnakeGameProject.gif'
+
+{/* Import project image */}
 import SpeechRecognitionProjectImg from '/src/assets/SpeechRecognitionProject.png'
 import MatherChessProjectImg from '/src/assets/MatherChessProject.png'
 import PersonalWebProject from '/src/assets/PersonalWebProject.png'
