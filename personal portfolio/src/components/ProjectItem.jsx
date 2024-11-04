@@ -1,5 +1,6 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import {ExternalLink } from 'lucide-react';
+import {FaGithub} from 'react-icons/fa'
 
 const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink }) => {
   return (
@@ -29,7 +30,7 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink })
             rel="noopener noreferrer"
             className="flex items-center space-x-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
           >
-            <Github className="h-4 w-4" />
+            <FaGithub className="h-4 w-4" />
             <span>View Code</span>
           </a>
           {demoLink && ( // Only show Live Demo button if demoLink exists

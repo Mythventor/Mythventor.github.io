@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
-import { FolderGit2, Code } from 'lucide-react';
+import {Code } from 'lucide-react';
 
 // Import your project images
 import SnakeGameProjectImg from '/src/assets/SnakeGameProject.gif';
@@ -35,7 +35,7 @@ const Project = () => {
       ProjectLink: 'https://github.com/Mythventor/mather-chess',
       demoLink: 'https://mythventor.github.io/mather-chess/', // Live demo available
     },
-    
+
     {
       img: SnakeGameProjectImg,
       title: 'Snake Game',
