@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
+import { FolderGit2, Code } from 'lucide-react';
 
 // Import your project images
 import SnakeGameProjectImg from '/src/assets/SnakeGameProject.gif';
@@ -16,24 +17,28 @@ const Project = () => {
       ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
       ProjectLink: 'https://github.com/Mythventor/Mythventor.github.io.git',
     },
+
     {
       img: LynnXingPersonalPortfolio,
       title: "Lynn Xing's Portfolio",
       ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
       ProjectLink: 'https://lynnxingdesign.github.io/',
     },
+
     {
       img: MatherChessProjectImg,
       title: 'Mather HS Chess Website',
       ProgrammingLanguage: 'React+CSS+JS',
       ProjectLink: 'https://mythventor.github.io/mather-chess/',
     },
+
     {
       img: SnakeGameProjectImg,
       title: 'Snake Game',
       ProgrammingLanguage: 'DrRacket',
       ProjectLink: 'https://github.com/Mythventor/SnakeGame.git',
     },
+    
     {
       img: SpeechRecognitionProjectImg,
       title: 'Speech Recognition App',
@@ -41,17 +46,25 @@ const Project = () => {
       ProjectLink: 'https://github.com/Mythventor/Voice-To-Text.git',
     },
 
+
+
   ];
 
   return (
     <div id="project" className="mx-auto max-w-7xl px-4 py-24">
       <div className="mb-16 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900">
-          Featured Projects
+        <div className="flex items-center justify-center gap-3 text-blue-600">
+          <Code className="h-6 w-6" />
+          <h2 className="text-lg font-semibold uppercase tracking-wider">
+            Featured Work
+          </h2>
+        </div>
+        <h1 className="mt-4 text-4xl font-bold text-gray-900 md:text-5xl">
+          Project Showcase
         </h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
-          Explore my portfolio of projects showcasing my experience in software
-          development, web design, and engineering solutions.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+          Explore my portfolio of innovative projects showcasing my expertise in
+          software development, web design, and engineering solutions.
         </p>
       </div>
 
