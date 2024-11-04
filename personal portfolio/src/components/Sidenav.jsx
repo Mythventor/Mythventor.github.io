@@ -40,8 +40,8 @@ const Sidenav = () => {
     { href: '#main', icon: Home, label: 'Home', sectionId: 'main' },
     { href: '#work', icon: Briefcase, label: 'Work', sectionId: 'work' },
     { href: '#project', icon: FolderGit2, label: 'Projects', sectionId: 'project' },
-    { href: resume, icon: User, label: 'Resume', external: true },
     { href: '#contact', icon: Mail, label: 'Contact', sectionId: 'contact' },
+    { href: resume, icon: User, label: 'Resume', external: true },
   ];
 
   useEffect(() => {
