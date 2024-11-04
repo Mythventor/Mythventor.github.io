@@ -1,6 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import {FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import {FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const main = () => {
@@ -39,7 +40,7 @@ const main = () => {
         
         <div className='flex text-[#193144] justify-between pt-6 max-w-[200px] w-full'>
             <a href='https://x.com/MengpangXing' target="_blank">
-            <FaTwitter  className='cursor-pointer' size ={20}></FaTwitter></a>
+            <FaXTwitter  className='cursor-pointer' size ={20}></FaXTwitter></a>
 
             <a href="https://www.facebook.com/mengpang.xing?mibextid=LQQJ4d" target="_blank">
             <FaFacebookF className='cursor-pointer' size ={20}></FaFacebookF></a>
