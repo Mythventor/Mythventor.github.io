@@ -16,36 +16,40 @@ const Project = () => {
       title: 'Personal Portfolio',
       ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
       ProjectLink: 'https://github.com/Mythventor/Mythventor.github.io.git',
+      demoLink: 'https://mythventor.github.io/', // Live demo available
     },
 
     {
       img: LynnXingPersonalPortfolio,
       title: "Lynn Xing's Portfolio",
       ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
-      ProjectLink: 'https://lynnxingdesign.github.io/',
+      ProjectLink: 'https://github.com/Mythventor/mather-chess',
+      demoLink: 'https://lynnxingdesign.github.io/', // Live demo available
     },
+
 
     {
       img: MatherChessProjectImg,
       title: 'Mather HS Chess Website',
       ProgrammingLanguage: 'React+CSS+JS',
-      ProjectLink: 'https://mythventor.github.io/mather-chess/',
+      ProjectLink: 'https://github.com/Mythventor/mather-chess',
+      demoLink: 'https://mythventor.github.io/mather-chess/', // Live demo available
     },
-
+    
     {
       img: SnakeGameProjectImg,
       title: 'Snake Game',
       ProgrammingLanguage: 'DrRacket',
       ProjectLink: 'https://github.com/Mythventor/SnakeGame.git',
+      demoLink: null, // No demo available
     },
-    
     {
       img: SpeechRecognitionProjectImg,
       title: 'Speech Recognition App',
       ProgrammingLanguage: 'Python',
       ProjectLink: 'https://github.com/Mythventor/Voice-To-Text.git',
+      demoLink: null, // No demo available
     },
-
 
 
   ];

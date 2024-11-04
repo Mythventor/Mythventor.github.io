@@ -1,7 +1,7 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
-const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink }) => {
+const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink }) => {
   return (
     <div className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
       {/* Image container with overlay */}
@@ -32,15 +32,17 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink }) => {
             <Github className="h-4 w-4" />
             <span>View Code</span>
           </a>
-          <a
-            href={ProjectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 rounded-lg bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
-          >
-            <ExternalLink className="h-4 w-4" />
-            <span>Live Demo</span>
-          </a>
+          {demoLink && ( // Only show Live Demo button if demoLink exists
+            <a
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 rounded-lg bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
+            >
+              <ExternalLink className="h-4 w-4" />
+              <span>Live Demo</span>
+            </a>
+          )}
         </div>
       </div>
     </div>
