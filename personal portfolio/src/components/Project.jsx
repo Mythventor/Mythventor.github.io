@@ -17,6 +17,18 @@ const Project = () => {
       ProjectLink: 'https://github.com/Mythventor/Mythventor.github.io.git',
     },
     {
+      img: LynnXingPersonalPortfolio,
+      title: "Lynn Xing's Portfolio",
+      ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
+      ProjectLink: 'https://lynnxingdesign.github.io/',
+    },
+    {
+      img: MatherChessProjectImg,
+      title: 'Mather HS Chess Website',
+      ProgrammingLanguage: 'React+CSS+JS',
+      ProjectLink: 'https://mythventor.github.io/mather-chess/',
+    },
+    {
       img: SnakeGameProjectImg,
       title: 'Snake Game',
       ProgrammingLanguage: 'DrRacket',
@@ -29,18 +41,6 @@ const Project = () => {
       ProjectLink: 'https://github.com/Mythventor/Voice-To-Text.git',
     },
 
-    {
-      img: LynnXingPersonalPortfolio,
-      title: "Lynn Xing's Portfolio",
-      ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
-      ProjectLink: 'https://lynnxingdesign.github.io/',
-    },
-    {
-      img: MatherChessProjectImg,
-      title: 'Mather HS Chess Website',
-      ProgrammingLanguage: 'React+CSS+JS',
-      ProjectLink: 'https://mythventor.github.io/mather-chess/',
-    },
   ];
 
   return (
