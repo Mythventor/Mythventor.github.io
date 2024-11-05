@@ -23,7 +23,7 @@ const Project = () => {
       img: LynnXingPersonalPortfolio,
       title: "Lynn Xing's Portfolio",
       ProgrammingLanguage: 'React+ViteJS+TailwindCSS',
-      ProjectLink: 'https://github.com/Mythventor/mather-chess',
+      ProjectLink: 'https://github.com/lynnxingdesign/lynnxingdesign.github.io',
       demoLink: 'https://lynnxingdesign.github.io/', // Live demo available
     },
 
