@@ -1,0 +1,258 @@
+/* Global animations - Enhanced with smooth transitions */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseLight {
+    0% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+  }
+  
+  /* Enhanced Animation classes with smoother easing */
+  .animate-in {
+    animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .pulse-light {
+    animation: pulseLight 2s infinite;
+  }
+  
+  /* Subtle Background Movement */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-shift {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  /* Particle animation - Smoother movement */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .floating {
+    animation: float 6s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+  
+  .floating-slow {
+    animation: float 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+  
+  .floating-fast {
+    animation: float 4s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+  
+  /* Text animation */
+  @keyframes typeIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .type-in {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typeIn 1s steps(40, end) forwards;
+  }
+  
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+  
+  /* Expanded animation delay utility classes */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-700 {
+    animation-delay: 0.7s;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  /* Staggered animation utility - add to parent container */
+  .stagger-children > * {
+    opacity: 0;
+  }
+  
+  .stagger-children > *:nth-child(1) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  }
+  
+  .stagger-children > *:nth-child(2) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  }
+  
+  .stagger-children > *:nth-child(3) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  
+  .stagger-children > *:nth-child(4) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  }
+  
+  .stagger-children > *:nth-child(5) {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  }
+  
+  /* Smooth transition utilities */
+  .transition-smooth {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .transition-bounce {
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  /* Shadow animation */
+  @keyframes shadowPulse {
+    0% {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .shadow-pulse {
+    animation: shadowPulse 5s infinite;
+  }
+  
+  /* Text shadow animation */
+  .text-shadow {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom animations */
+  .title-animation {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .subtitle-animation {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .button-animation {
+    animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+    opacity: 0;
+  }

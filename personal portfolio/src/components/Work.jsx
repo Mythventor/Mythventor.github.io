@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import WorkItem from './WorkItem';
 import { Calendar, Briefcase } from 'lucide-react';
 
@@ -24,9 +24,62 @@ const data = [
 ];
 
 const Work = () => {
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+  
+  // Add this CSS to your global CSS file or component
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .animate-in {
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
-    <div id="work" className="mx-auto max-w-7xl px-4 py-24">
-      <div className="mb-16 text-center">
+    <div id="work" className="relative mx-auto max-w-7xl px-4 py-24 overflow-hidden">
+      <div ref={sectionRef} className="mb-16 text-center opacity-0 translate-y-10 transition-all duration-700">
         <div className="flex items-center justify-center gap-3 text-blue-600">
           <Briefcase className="h-6 w-6" />
           <h2 className="text-lg font-semibold uppercase tracking-wider">Career Path</h2>
