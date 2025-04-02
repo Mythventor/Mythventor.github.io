@@ -133,7 +133,7 @@ const Main = () => {
           ref={contentRef}
           className='relative z-30 max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center opacity-0 translate-y-10 transition-all duration-1000 ease-out'
         >
-            <h1 className='sm:text-6xl text-5xl font-industry font-bold text-gray-800 mb-2 text-shadow shadow-white'>
+            <h1 className='sm:text-5xl text-4xl font-industry font-bold text-gray-800 mb-2 text-shadow shadow-white'>
               I'm Mengpang Xing
             </h1>
             
