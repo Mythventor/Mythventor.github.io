@@ -21,7 +21,7 @@ const Project = () => {
       img: RubricXpertProjectImg,
       title: 'RubricXpert',
       ProgrammingLanguage: 'React + Python',
-      categories: ['Full-Stack Development', 'Artificial Intelligence'], // Multiple categories
+      categories: ['Full-Stack Development', 'Artificial Intelligence', 'Web Development'], // Multiple categories
       ProjectLink: 'https://github.com/Mythventor/RubricXpert.git',
       demoLink: 'https://rubricXpert.org',
     },
