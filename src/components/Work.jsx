@@ -1,25 +1,69 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import WorkItem from './WorkItem';
-import { Calendar, Briefcase } from 'lucide-react';
+import { BriefcaseBusiness, Building2, Sparkles } from 'lucide-react';
 
 const data = [
   {
+    year: 2026,
+    title: 'Incoming Software Engineer Intern',
+    company: 'CME Group',
+    duration: 'Summer 2026',
+    location: 'Chicago, IL',
+    type: 'Upcoming',
+    details: [
+      'Joining CME Group as an upcoming Summer 2026 Software Engineer Intern focused on financial-market technology and production engineering workflows.',
+      'Bringing full-stack, cloud deployment, and data-quality experience into a high-reliability engineering environment.',
+    ],
+  },
+  {
+    year: 2025,
+    title: 'Software Engineer Intern',
+    company: 'Cars Commerce (Cars.com)',
+    duration: 'Mar 2025 - Aug 2025',
+    location: 'Chicago, IL',
+    type: 'Recent',
+    details: [
+      'Architected a production-grade customer data platform using React, FastAPI, and PostgreSQL to centralize dealership analytics for 1,000+ automotive dealers nationwide.',
+      'Containerized and deployed the application to AWS ECS with a Jenkins pipeline, reaching 200 QPS with 50ms average latency and reducing release time by 70%.',
+      'Deployed 16 Metaplane data monitors across 50+ critical tables, cutting mean time to detect data-quality issues by 40% across pricing and lead-generation pipelines.',
+    ],
+  },
+  {
     year: 2024,
-    title: 'Full-Stack Developer, Y STEM and Chess Inc',
+    title: 'Full-Stack Developer Internship',
+    company: 'Y STEM and Chess Inc',
     duration: 'Jun 2024 - Sep 2024',
-    details: `As a Full-Stack Developer, I collaborated with the design team to develop and maintain responsive, user-friendly web interfaces for an educational chess platform, focusing on accessibility and enhancing the user experience. I built and optimized interactive features and game elements using TypeScript and React to support students' learning in chess and STEM subjects. Additionally, I conducted rigorous testing and debugging to ensure the web applications performed seamlessly across various browsers and devices, quickly resolving any compatibility issues.`,
+    location: 'Boise, ID',
+    type: 'Internship',
+    details: [
+      'Developed RESTful APIs with Node.js and Express.js for user authentication, lesson progression, and chess game state across a growing student platform.',
+      'Implemented PostgreSQL schemas for student progress, lesson content, and game history, optimizing queries to reduce response times by 30%.',
+      'Built responsive React and TypeScript interfaces with accessibility-focused polish, helping reduce student drop-off through clearer lesson interactions.',
+    ],
   },
   {
     year: 2023,
-    title: 'STEM Scholar Internship, University of Illinois Chicago',
+    title: 'STEM Scholar Internship & After-school Program',
+    company: 'University of Illinois Chicago',
     duration: 'Nov 2022 - Aug 2023',
-    details: 'I collaborated with students from over 20 high schools to tackle challenges in engineering, architecture, and sustainability. I engineered a Rube Goldberg machine, applying physics and mechanical engineering principles, and participated in civil engineering and architecture projects, gaining insights into structural design and foundation engineering. Additionally, I designed a community solar microgrid model, enhancing my understanding of sustainable energy practices and electrical engineering applications.',
+    location: 'Chicago, IL',
+    type: 'Program',
+    details: [
+      'Collaborated with students from 20+ high schools on engineering, architecture, and sustainable development challenges.',
+      'Engineered a Rube Goldberg machine with 12+ mechanical components and designed a community solar microgrid model for five model homes.',
+    ],
   },
   {
     year: 2023,
-    title: 'Coding Fun Apprenticeship, Pui Tak Center',
+    title: 'Coding Fun Apprenticeship',
+    company: 'Pui Tak Center',
     duration: 'Jan 2023 - June 2023',
-    details: 'During my Coding Fun Apprenticeship at Pui Tak Center, I mastered computer science fundamentals with a focus on web development using HTML, CSS, and JavaScript. I developed a strong understanding of coding concepts, web design principles, and interactive content creation while engaging in hands-on projects that simulated real-world scenarios, enhancing my problem-solving and teamwork skills. I also applied my knowledge of responsive design and CSS animation to create functional, user-friendly web applications, effectively bridging the gap between theory and practice in software development.',
+    location: 'Chicago, IL',
+    type: 'Apprenticeship',
+    details: [
+      'Built a foundation in HTML, CSS, JavaScript, responsive design, and interactive web content through hands-on software projects.',
+      'Strengthened problem-solving and teamwork skills by translating programming fundamentals into functional user-facing applications.',
+    ],
   },
 ];
 
@@ -40,71 +84,64 @@ const Work = () => {
       }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+
+    if (currentSection) {
+      observer.observe(currentSection);
     }
     
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
   
-  // Add this CSS to your global CSS file or component
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.innerHTML = `
-      .animate-in {
-        animation: fadeInUp 0.8s ease forwards;
-      }
-      
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
-
   return (
-    <div id="work" className="relative mx-auto max-w-7xl px-4 py-24 overflow-hidden">
+    <section id="work" className="relative overflow-hidden px-6 py-24 sm:px-8 lg:px-16">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
+      <div className="mx-auto max-w-7xl">
       <div ref={sectionRef} className="mb-16 text-center opacity-0 translate-y-10 transition-all duration-700">
         <div className="flex items-center justify-center gap-3 text-blue-600">
-          <Briefcase className="h-6 w-6" />
-          <h2 className="text-lg font-semibold uppercase tracking-wider">Career Path</h2>
+          <BriefcaseBusiness className="h-6 w-6" />
+          <h2 className="text-lg font-semibold uppercase">Career Path</h2>
         </div>
-        <h1 className="mt-4 text-4xl font-bold text-gray-900 md:text-5xl">Work Experience</h1>
+        <h1 className="mt-4 text-4xl font-bold text-slate-950 md:text-5xl">Work Experience</h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-          Explore my professional journey and the experiences that have shaped my career in software development and engineering.
+          Production software, data platforms, teaching technology, and the next stop in financial-market engineering.
         </p>
+        <div className="mx-auto mt-8 grid max-w-4xl gap-3 text-left sm:grid-cols-3">
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+            <Sparkles className="mb-3 h-5 w-5 text-[#0092ff]" />
+            <p className="font-semibold text-slate-950">Incoming 2026</p>
+            <p className="mt-1 text-sm text-slate-600">CME Group SWE intern</p>
+          </div>
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+            <Building2 className="mb-3 h-5 w-5 text-emerald-600" />
+            <p className="font-semibold text-slate-950">Cars Commerce</p>
+            <p className="mt-1 text-sm text-slate-600">Dealer analytics and AWS deployment</p>
+          </div>
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+            <BriefcaseBusiness className="mb-3 h-5 w-5 text-slate-600" />
+            <p className="font-semibold text-slate-950">Full-stack range</p>
+            <p className="mt-1 text-sm text-slate-600">React, APIs, PostgreSQL, CI/CD</p>
+          </div>
+        </div>
       </div>
 
-      <div className="relative mx-auto max-w-3xl">
-        <div className="absolute left-1/2 h-full w-px -translate-x-1/2 transform bg-gradient-to-b from-blue-500/0 via-blue-500/50 to-blue-500/0"></div>
+      <div className="relative mx-auto max-w-5xl">
+        <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-blue-500/0 via-blue-500/60 to-blue-500/0 md:left-1/2 md:-translate-x-1/2"></div>
         {data.map((item, idx) => (
           <WorkItem 
             key={idx} 
-            year={item.year} 
-            title={item.title} 
-            duration={item.duration} 
-            details={item.details}
-            isFirst={idx === 0}
+            item={item}
+            index={idx}
             isLast={idx === data.length - 1}
           />
         ))}
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 
