@@ -2,9 +2,11 @@ import { useEffect } from 'react'
 import Sidenav from './components/Sidenav'
 import Main from './components/main'
 import Work from './components/Work'
+import Skills from './components/Skills'
 import Project from './components/Project'
 import Contact from './components/Contact'
 import ScrollToTop from './components/ScrollToTop'
+import Footer from './components/Footer'
 import './animations.css'
 
 function App() {
@@ -23,12 +25,14 @@ function App() {
     <div className="relative min-h-screen overflow-x-hidden bg-[#f6faff] text-slate-900 selection:bg-sky-200 selection:text-slate-950">
       <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(135deg,#ffffff_0%,#eef7ff_36%,#f8fbff_68%,#ffffff_100%)]" />
       <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(rgba(15,23,42,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.045)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:linear-gradient(to_bottom,transparent,black_14%,black_86%,transparent)]" />
-      <div className="relative z-10">
+      <div className="relative z-10 md:pl-24 2xl:pl-0">
         <Sidenav />
         <Main />
         <Work />
+        <Skills />
         <Project />
         <Contact />
+        <Footer />
         <ScrollToTop />
       </div>
     </div>

@@ -5,15 +5,21 @@ import { BriefcaseBusiness, Building2, Sparkles } from 'lucide-react';
 const data = [
   {
     year: 2026,
-    title: 'Incoming Software Engineer Intern',
+    title: 'Software Engineer Intern',
     company: 'CME Group',
-    duration: 'Summer 2026',
+    duration: 'Jun 2026 - Present',
     location: 'Chicago, IL',
-    type: 'Upcoming',
+    type: 'Current · Year-round',
+    current: true,
     details: [
-      'Joining CME Group as an upcoming Summer 2026 Software Engineer Intern focused on financial-market technology and production engineering workflows.',
-      'Bringing full-stack, cloud deployment, and data-quality experience into a high-reliability engineering environment.',
+      'Engineer an LLM-powered ticket-intake guardrail agent that validates required context, enriches submissions, and blocks malformed partner requests before they reach the SRE queue, cutting manual intake work and on-call time.',
+      'Design a BigQuery-backed CI/CD and Deployment Health dashboard that gives on-call engineers immediate root-cause isolation across GCE, network, DNS, IAM, and logging-provider issues, reducing MTTD for deployment failures.',
+      'Standardize failure signatures and quota/stockout triggers across log pipelines to eliminate high-volume false positives and isolate 3,701 actionable failures for more reliable live alerting.',
+      'Automate cloud cost controls with a multithreaded Python audit tool comparing historical GCP metrics against live API state, identifying 78 unused compute reservations and alerting on resources idle 7+ days.',
+      'Configure a Gemini Enterprise orchestrator agent that routes infrastructure logs through data-retrieval, synthesis, and QA/compliance sub-agents for layered, daily incident analysis.',
+      'Publish historical peak metrics to BigQuery through the Unified Data Analytics Platform, authoring YAML schemas and deployment runbooks and promoting changes across four environments.',
     ],
+    tags: ['GCP', 'BigQuery', 'LLM Agents', 'Gemini Enterprise', 'Python', 'Observability', 'FinOps'],
   },
   {
     year: 2025,
@@ -21,25 +27,28 @@ const data = [
     company: 'Cars Commerce (Cars.com)',
     duration: 'Mar 2025 - Aug 2025',
     location: 'Chicago, IL',
-    type: 'Recent',
+    type: 'Internship',
     details: [
-      'Architected a production-grade customer data platform using React, FastAPI, and PostgreSQL to centralize dealership analytics for 1,000+ automotive dealers nationwide.',
-      'Containerized and deployed the application to AWS ECS with a Jenkins pipeline, reaching 200 QPS with 50ms average latency and reducing release time by 70%.',
-      'Deployed 16 Metaplane data monitors across 50+ critical tables, cutting mean time to detect data-quality issues by 40% across pricing and lead-generation pipelines.',
+      'Built a production customer-data platform using React, FastAPI, and PostgreSQL, centralizing analytics for 1,000+ automotive dealers.',
+      'Containerized and deployed on AWS ECS with Jenkins CI/CD, sustaining 200 QPS at 50 ms latency while reducing release time by 70%.',
+      'Migrated workloads from EKS to ECS, eliminating Kubernetes cluster-maintenance overhead while preserving availability and simplifying deployments.',
+      'Implemented 16 Metaplane data-quality monitors across 50+ critical tables, reducing mean time to detect data issues by 40% across pricing and lead-generation pipelines.',
     ],
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'AWS ECS', 'Jenkins', 'Metaplane'],
   },
   {
     year: 2024,
-    title: 'Full-Stack Developer Internship',
+    title: 'Full-Stack Developer Intern',
     company: 'Y STEM and Chess Inc',
     duration: 'Jun 2024 - Sep 2024',
-    location: 'Boise, ID',
+    location: 'Boise, ID (Remote)',
     type: 'Internship',
     details: [
-      'Developed RESTful APIs with Node.js and Express.js for user authentication, lesson progression, and chess game state across a growing student platform.',
-      'Implemented PostgreSQL schemas for student progress, lesson content, and game history, optimizing queries to reduce response times by 30%.',
-      'Built responsive React and TypeScript interfaces with accessibility-focused polish, helping reduce student drop-off through clearer lesson interactions.',
+      'Developed RESTful APIs with Node.js and Express for authentication, lesson tracking, and chess game state, supporting 500+ students as enrollment grew 3x year-over-year.',
+      'Optimized PostgreSQL schema and queries to reduce response times by 30% as usage expanded.',
+      'Crafted responsive, accessible React and TypeScript interfaces with the design team, improving lesson interactivity and reducing student drop-off by 25%.',
     ],
+    tags: ['Node.js', 'Express', 'PostgreSQL', 'React', 'TypeScript'],
   },
   {
     year: 2023,
@@ -108,13 +117,13 @@ const Work = () => {
         </div>
         <h1 className="mt-4 text-4xl font-bold text-slate-950 md:text-5xl">Work Experience</h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-          Production software, data platforms, teaching technology, and the next stop in financial-market engineering.
+          From student-facing platforms to dealer analytics to reliability engineering for one of the world&apos;s largest derivatives marketplaces.
         </p>
         <div className="mx-auto mt-8 grid max-w-4xl gap-3 text-left sm:grid-cols-3">
           <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
             <Sparkles className="mb-3 h-5 w-5 text-[#0092ff]" />
-            <p className="font-semibold text-slate-950">Incoming 2026</p>
-            <p className="mt-1 text-sm text-slate-600">CME Group SWE intern</p>
+            <p className="font-semibold text-slate-950">Now at CME Group</p>
+            <p className="mt-1 text-sm text-slate-600">Year-round SWE intern · SRE tooling on GCP</p>
           </div>
           <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
             <Building2 className="mb-3 h-5 w-5 text-emerald-600" />
@@ -124,7 +133,7 @@ const Work = () => {
           <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
             <BriefcaseBusiness className="mb-3 h-5 w-5 text-slate-600" />
             <p className="font-semibold text-slate-950">Full-stack range</p>
-            <p className="mt-1 text-sm text-slate-600">React, APIs, PostgreSQL, CI/CD</p>
+            <p className="mt-1 text-sm text-slate-600">React, REST APIs, PostgreSQL, CI/CD</p>
           </div>
         </div>
       </div>

@@ -6,9 +6,9 @@ import { Code, Filter, Layers3 } from 'lucide-react';
 import SnakeGameProjectImg from '/src/assets/SnakeGameProject.gif';
 import SpeechRecognitionProjectImg from '/src/assets/SpeechRecognitionProject.jpg';
 import RubricXpertProjectImg from '/src/assets/RubricXpert.png'
-import PersonalPortfolio from '/src/assets/PersonalWebProject.png';
-import LynnXingPersonalPortfolio from '/src/assets/LynnXingDesignPortfolio.png';
-import MatherChessProjectImg from '/src/assets/MatherChessProject.png';
+import PersonalPortfolio from '/src/assets/PersonalWebProject.jpg';
+import LynnXingPersonalPortfolio from '/src/assets/LynnXingDesignPortfolio.jpg';
+import MatherChessProjectImg from '/src/assets/MatherChessProject.jpg';
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
     title: 'RubricXpert',
     ProgrammingLanguage: 'React + Python',
     categories: ['Full-Stack Development', 'Artificial Intelligence', 'Web Development'],
-    description: 'AI-assisted essay evaluation platform with rubric-aligned scoring, file conversion, and structured analysis outputs.',
+    description: 'Parallelized essay-evaluation system combining GPT-4o, Longformer, and MiniLM across 10 concurrent workers, delivering real-time feedback on 50+ rubric criteria per essay.',
     ProjectLink: 'https://github.com/Mythventor/RubricXpert.git',
     demoLink: 'https://rubricXpert.org',
   },
@@ -25,7 +25,7 @@ const projects = [
     title: 'Personal Portfolio',
     ProgrammingLanguage: 'React',
     categories: ['Web Development'],
-    description: 'This portfolio site, rebuilt as a fast, responsive React experience with polished sections and a visual project system.',
+    description: 'This site: a fast, responsive React + Vite experience, built and deployed automatically to GitHub Pages by GitHub Actions on every push.',
     ProjectLink: 'https://github.com/Mythventor/Mythventor.github.io.git',
     demoLink: 'https://mythventor.github.io/',
   },
@@ -135,7 +135,7 @@ const Project = () => {
           Project Showcase
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-          A curated set of full-stack, AI, web, game, and tool projects with direct code and demo paths.
+          A curated set of AI, full-stack, web, game, and tooling projects, each with code and a demo where available.
         </p>
         
         <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-lg border border-sky-100 bg-white/70 p-2 shadow-sm backdrop-blur">

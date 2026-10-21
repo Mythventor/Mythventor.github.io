@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Mail, User, Phone, MessageSquare, Send, Check, AlertTriangle, Linkedin, MapPin } from 'lucide-react';
 
+const CONTACT_EMAIL = 'Mengpangxing2027@u.northwestern.edu';
+
 const InputField = ({ label, type, name, icon: Icon, value, onChange, error }) => (
   <div className="flex flex-col space-y-2">
     <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
@@ -73,41 +75,32 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
   
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!validateForm()) return;
     
     setIsSubmitting(true);
     
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Successfully submitted
-      setSubmitStatus('success');
-      setFormState({
-        name: '',
-        phone: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 3000);
-    } catch {
-      setSubmitStatus('error');
-      
-      // Reset status after 3 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 3000);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Static site: hand the message to the visitor's email client
+    const subject = formState.subject.trim() || `Hello from ${formState.name.trim()}`;
+    const body = [
+      formState.message.trim(),
+      '',
+      '—',
+      formState.name.trim(),
+      formState.email.trim(),
+      formState.phone.trim(),
+    ].filter((line, i) => i < 3 || line).join('\n');
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    
+    // Reset status after 4 seconds
+    setTimeout(() => {
+      setSubmitStatus(null);
+    }, 4000);
   };
   
   // Animation for section
@@ -152,7 +145,7 @@ const Contact = () => {
           Contact Me
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-          Have a project, internship lead, or engineering idea worth building? Send a note and I will follow up.
+          Have a role, project, or engineering idea worth building? Send a note and I will follow up.
         </p>
       </div>
 
@@ -160,12 +153,12 @@ const Contact = () => {
         <aside className="rounded-lg border border-white/80 bg-white/80 p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur">
           <h3 className="text-2xl font-bold text-slate-950">Let&apos;s build something useful.</h3>
           <p className="mt-3 leading-7 text-slate-600">
-            I am especially interested in full-stack engineering, data platforms, developer tooling, and AI systems that make real workflows faster.
+            I am especially interested in site reliability, cloud infrastructure, LLM agents, and full-stack systems that make real engineering workflows faster and safer.
           </p>
 
           <div className="mt-8 space-y-4">
             <a
-              href="mailto:Mengpangxing2027@u.northwestern.edu"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700"
             >
               <Mail className="h-5 w-5 text-[#0092ff]" />
@@ -194,8 +187,8 @@ const Contact = () => {
                 <div className="rounded-full bg-green-100 p-4">
                   <Check className="h-12 w-12 text-green-600" />
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-gray-900">Message Sent!</h3>
-                <p className="mt-2 text-gray-600">Thank you for reaching out. I&apos;ll get back to you soon.</p>
+                <h3 className="mt-4 text-xl font-bold text-gray-900">Almost there!</h3>
+                <p className="mt-2 max-w-sm px-6 text-center text-gray-600">Your email app should open with the message ready to send. Thanks for reaching out!</p>
               </div>
             )}
             
@@ -300,7 +293,7 @@ const Contact = () => {
                     <Send className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                   )}
                   <span className="font-medium">
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Opening email...' : 'Send Message'}
                   </span>
                 </div>
               </button>

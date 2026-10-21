@@ -8,6 +8,7 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink, c
         <img
           src={img}
           alt={title}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-40" />

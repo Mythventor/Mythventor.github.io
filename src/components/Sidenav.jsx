@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Menu, Home, Briefcase, FolderGit2, User, Mail, X } from 'lucide-react';
+import { Menu, Home, Briefcase, FolderGit2, User, Mail, X, Layers } from 'lucide-react';
 import resume from '/src/assets/Mengpang_Xing_Resume.pdf';
 
 const navItems = [
   { href: '#main', icon: Home, label: 'Home', sectionId: 'main' },
   { href: '#work', icon: Briefcase, label: 'Work', sectionId: 'work' },
+  { href: '#skills', icon: Layers, label: 'Skills', sectionId: 'skills' },
   { href: '#project', icon: FolderGit2, label: 'Projects', sectionId: 'project' },
   { href: '#contact', icon: Mail, label: 'Contact', sectionId: 'contact' },
   { href: resume, icon: User, label: 'Resume', external: true },

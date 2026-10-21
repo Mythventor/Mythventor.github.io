@@ -14,9 +14,10 @@ const socialLinks = [
 ];
 
 const highlights = [
-  { value: 'Summer 2026', label: 'Incoming SWE Intern at CME Group' },
-  { value: '1,000+', label: 'Dealers supported through Cars Commerce analytics' },
-  { value: '200 QPS', label: 'AWS ECS platform throughput with Jenkins CI/CD' },
+  { value: '3,701', label: 'Actionable failures isolated from noisy alert pipelines' },
+  { value: '78', label: 'Unused GCP compute reservations surfaced by audit tooling' },
+  { value: '1,000+', label: 'Dealers served by the Cars Commerce data platform' },
+  { value: '200 QPS', label: 'At 50 ms latency on AWS ECS with Jenkins CI/CD' },
 ];
 
 const Main = () => {
@@ -133,8 +134,12 @@ const Main = () => {
           >
             <div className="mb-7 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700">
               <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                </span>
                 <BriefcaseBusiness className="h-4 w-4 text-[#0092ff]" />
-                Incoming CME Group SWE Intern
+                SWE Intern @ CME Group · Year-round
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
                 <GraduationCap className="h-4 w-4 text-emerald-600" />
@@ -147,7 +152,7 @@ const Main = () => {
             </div>
 
             <p className="mb-3 max-w-full text-xs font-bold uppercase leading-5 text-[#007acc] sm:text-sm">
-              Software engineer building polished systems
+              Software Engineering · Site Reliability · Cloud Infrastructure
             </p>
             <h1 className='max-w-4xl text-[2.8rem] font-industry font-bold leading-tight text-slate-950 sm:text-6xl lg:text-7xl'>
               Mengpang Xing
@@ -157,13 +162,15 @@ const Main = () => {
               <span>I build </span>
               <TypeAnimation
                 sequence={[
+                  ' LLM agents for SRE teams',
+                  2000,
+                  ' reliable cloud infrastructure',
+                  2000,
+                  ' observability that cuts noise',
+                  2000,
                   ' production data platforms',
                   2000,
                   ' full-stack web apps',
-                  2000,
-                  ' AI evaluation tools',
-                  2000,
-                  ' learning experiences',
                   2000
                 ]}
                 wrapper="span"
@@ -175,7 +182,7 @@ const Main = () => {
             </h2>
 
             <p className="mt-6 max-w-full break-words text-lg leading-8 text-slate-700 [overflow-wrap:anywhere] sm:max-w-2xl">
-              Computer Science and Data Science student at Northwestern with production experience across React, FastAPI, PostgreSQL, AWS, Jenkins, and data-quality tooling.
+              Year-round Software Engineer Intern at CME Group, building LLM-powered intake agents, deployment-health observability, and cloud cost automation on GCP for site reliability teams. Computer Science + Data Science at Northwestern, graduating 2027.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -220,10 +227,10 @@ const Main = () => {
               ))}
             </div>
 
-            <div className="mt-12 grid w-full max-w-full gap-3 sm:grid-cols-3 lg:max-w-3xl">
+            <div className="mt-12 grid w-full max-w-full grid-cols-2 gap-3 lg:max-w-4xl lg:grid-cols-4">
               {highlights.map((highlight) => (
-                <div key={highlight.label} className="rounded-lg border border-white/80 bg-white/70 p-4 shadow-sm backdrop-blur-md">
-                  <p className="text-xl font-bold text-slate-950">{highlight.value}</p>
+                <div key={highlight.label} className="rounded-lg border border-white/80 bg-white/70 p-4 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md">
+                  <p className="text-2xl font-extrabold tracking-tight text-slate-950">{highlight.value}</p>
                   <p className="mt-1 text-sm leading-5 text-slate-600">{highlight.label}</p>
                 </div>
               ))}
