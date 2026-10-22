@@ -97,10 +97,10 @@ const Contact = () => {
     setSubmitStatus('success');
     setIsSubmitting(false);
     
-    // Reset status after 4 seconds
+    // Reset status after 6 seconds
     setTimeout(() => {
       setSubmitStatus(null);
-    }, 4000);
+    }, 6000);
   };
   
   // Animation for section
@@ -183,18 +183,22 @@ const Contact = () => {
         <div className="overflow-hidden rounded-lg border border-white/80 bg-white/90 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur">
           <div className="relative p-6 sm:p-8">
             {submitStatus === 'success' && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
+              <div className="fade-in absolute inset-0 z-20 flex flex-col items-center justify-center bg-white px-6 text-center">
                 <div className="rounded-full bg-green-100 p-4">
                   <Check className="h-12 w-12 text-green-600" />
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-900">Almost there!</h3>
-                <p className="mt-2 max-w-sm px-6 text-center text-gray-600">Your email app should open with the message ready to send. Thanks for reaching out!</p>
+                <p className="mt-2 max-w-sm text-gray-600">Your email app should open with the message ready to send. Thanks for reaching out!</p>
+                <p className="mt-4 text-sm text-slate-500">
+                  Nothing opened? Email me at{' '}
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-blue-600 hover:underline">{CONTACT_EMAIL}</a>
+                </p>
               </div>
             )}
             
             {/* Error overlay */}
             {submitStatus === 'error' && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
+              <div className="fade-in absolute inset-0 z-20 flex flex-col items-center justify-center bg-white px-6 text-center">
                 <div className="rounded-full bg-red-100 p-4">
                   <AlertTriangle className="h-12 w-12 text-red-600" />
                 </div>
