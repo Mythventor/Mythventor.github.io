@@ -1,12 +1,17 @@
 /* Global animations - Enhanced with smooth transitions */
+/* Entrance keyframes reset `translate`/`scale` because Tailwind v4 utilities use those standalone properties */
 @keyframes fadeInUp {
     from {
       opacity: 0;
       transform: translateY(30px);
+      translate: none;
+      scale: none;
     }
     to {
       opacity: 1;
       transform: translateY(0);
+      translate: none;
+      scale: none;
     }
   }
   
@@ -23,10 +28,14 @@
     from {
       opacity: 0;
       transform: translateX(30px);
+      translate: none;
+      scale: none;
     }
     to {
       opacity: 1;
       transform: translateX(0);
+      translate: none;
+      scale: none;
     }
   }
   
@@ -34,10 +43,14 @@
     from {
       opacity: 0;
       transform: translateX(-30px);
+      translate: none;
+      scale: none;
     }
     to {
       opacity: 1;
       transform: translateX(0);
+      translate: none;
+      scale: none;
     }
   }
   
@@ -45,10 +58,14 @@
     from {
       opacity: 0;
       transform: scale(0.9);
+      translate: none;
+      scale: none;
     }
     to {
       opacity: 1;
       transform: scale(1);
+      translate: none;
+      scale: none;
     }
   }
   

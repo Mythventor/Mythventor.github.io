@@ -69,21 +69,14 @@ const projects = [
 
 const Project = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
-  const [filteredProjects, setFilteredProjects] = useState([]);
   const sectionRef = useRef(null);
   
   const allCategories = projects.flatMap(project => project.categories);
   const uniqueCategories = ['All', ...new Set(allCategories)];
   
-  useEffect(() => {
-    if (selectedFilter === 'All') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(
-        projects.filter(project => project.categories.includes(selectedFilter))
-      );
-    }
-  }, [selectedFilter]);
+  const filteredProjects = selectedFilter === 'All'
+    ? projects
+    : projects.filter(project => project.categories.includes(selectedFilter));
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -112,15 +105,6 @@ const Project = () => {
     };
   }, []);
 
-  const EnhancedProjectItem = (project) => {
-    return (
-      <ProjectItem 
-        {...project} 
-        category={project.categories[0]}
-      />
-    );
-  };
-
   return (
     <section id="project" className="relative px-6 py-24 sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
@@ -138,7 +122,7 @@ const Project = () => {
           A curated set of AI, full-stack, web, game, and tooling projects, each with code and a demo where available.
         </p>
         
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-lg border border-sky-100 bg-white/70 p-2 shadow-sm backdrop-blur">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-lg border border-sky-100 bg-white/70 p-2 shadow-xs backdrop-blur-sm">
           {uniqueCategories.map(category => (
             <button
               key={category}
@@ -168,7 +152,7 @@ const Project = () => {
               animationFillMode: 'forwards',
             }}
           >
-            <EnhancedProjectItem {...project} />
+            <ProjectItem {...project} />
           </div>
         ))}
       </div>

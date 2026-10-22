@@ -116,7 +116,7 @@ const Main = () => {
   return (
     <section id='main' className="relative min-h-screen overflow-hidden">
         <img 
-          className='absolute inset-0 z-0 h-full w-full object-cover object-left transition-transform duration-[10000ms] ease-out hover:scale-105' 
+          className='absolute inset-0 z-0 h-full w-full object-cover object-left transition-transform duration-10000 ease-out hover:scale-105' 
           src='https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
           alt="Sunlit mountain landscape"
         />
@@ -133,7 +133,7 @@ const Main = () => {
             className='w-[calc(100vw-3rem)] min-w-0 max-w-4xl sm:w-full'
           >
             <div className="mb-7 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700">
-              <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
+              <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-2 shadow-xs backdrop-blur-sm">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
@@ -141,11 +141,11 @@ const Main = () => {
                 <BriefcaseBusiness className="h-4 w-4 text-[#0092ff]" />
                 SWE Intern @ CME Group · Year-round
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-xs backdrop-blur-sm">
                 <GraduationCap className="h-4 w-4 text-emerald-600" />
                 Northwestern CS + Data Science
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-xs backdrop-blur-sm">
                 <MapPin className="h-4 w-4 text-slate-500" />
                 Chicago / Evanston
               </span>
@@ -181,14 +181,14 @@ const Main = () => {
               />
             </h2>
 
-            <p className="mt-6 max-w-full break-words text-lg leading-8 text-slate-700 [overflow-wrap:anywhere] sm:max-w-2xl">
+            <p className="mt-6 max-w-full wrap-break-word text-lg leading-8 text-slate-700 wrap-anywhere sm:max-w-2xl">
               Year-round Software Engineer Intern at CME Group, building LLM-powered intake agents, deployment-health observability, and cloud cost automation on GCP for site reliability teams. Computer Science + Data Science at Northwestern, graduating 2027.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-2 rounded-lg bg-[#0092ff] px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#007acc] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
+                className="group inline-flex items-center gap-2 rounded-lg bg-[#0092ff] px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#007acc] hover:shadow-xl focus:outline-hidden focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
               >
                 View Experience
                 <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -197,14 +197,14 @@ const Main = () => {
                 href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-800 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-[#007acc] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-800 shadow-xs backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-[#007acc] hover:shadow-md focus:outline-hidden focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
               >
                 <FileText className="h-4 w-4" />
                 Resume
               </a>
               <a
                 href="#project"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-5 py-3 font-semibold text-slate-800 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-[#007acc] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-5 py-3 font-semibold text-slate-800 shadow-xs backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-[#007acc] hover:shadow-md focus:outline-hidden focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
               >
                 Projects
                 <ExternalLink className="h-4 w-4" />
@@ -219,7 +219,7 @@ const Main = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="group relative flex h-10 w-10 items-center justify-center rounded-lg border border-white/80 bg-white/70 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-blue-600 hover:shadow-md"
+                  className="group relative flex h-10 w-10 items-center justify-center rounded-lg border border-white/80 bg-white/70 shadow-xs backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:text-blue-600 hover:shadow-md"
                 >
                   <Icon className='cursor-pointer' size={20}/>
                   <span className="pointer-events-none absolute -bottom-9 left-1/2 -translate-x-1/2 rounded-md bg-slate-950 px-2 py-1 text-xs text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap">{label}</span>
@@ -229,7 +229,7 @@ const Main = () => {
 
             <div className="mt-12 grid w-full max-w-full grid-cols-2 gap-3 lg:max-w-4xl lg:grid-cols-4">
               {highlights.map((highlight) => (
-                <div key={highlight.label} className="rounded-lg border border-white/80 bg-white/70 p-4 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md">
+                <div key={highlight.label} className="rounded-lg border border-white/80 bg-white/70 p-4 shadow-xs backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md">
                   <p className="text-2xl font-extrabold tracking-tight text-slate-950">{highlight.value}</p>
                   <p className="mt-1 text-sm leading-5 text-slate-600">{highlight.label}</p>
                 </div>

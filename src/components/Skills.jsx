@@ -76,7 +76,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="relative px-6 py-24 sm:px-8 lg:px-16">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-sky-200 to-transparent" />
       <div className="mx-auto max-w-7xl">
         <div ref={sectionRef} className="mb-14 text-center opacity-0 translate-y-10 transition-all duration-700">
           <div className="flex items-center justify-center gap-3 text-blue-600">
@@ -89,7 +89,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="mb-6 flex flex-col gap-5 rounded-lg border border-sky-100 bg-gradient-to-r from-white/95 via-white/90 to-sky-50/90 p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur sm:flex-row sm:items-center">
+        <div className="mb-6 flex flex-col gap-5 rounded-lg border border-sky-100 bg-linear-to-r from-white/95 via-white/90 to-sky-50/90 p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm sm:flex-row sm:items-center">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-[#4e2a84] text-white shadow-lg shadow-purple-900/20">
             <GraduationCap className="h-7 w-7" />
           </div>
@@ -106,7 +106,7 @@ const Skills = () => {
           {skillGroups.map(({ title, icon: Icon, items }) => (
             <div
               key={title}
-              className="group rounded-lg border border-white/80 bg-white/90 p-5 shadow-[0_18px_55px_rgba(15,23,42,0.06)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-[0_24px_70px_rgba(0,146,255,0.12)]"
+              className="group rounded-lg border border-white/80 bg-white/90 p-5 shadow-[0_18px_55px_rgba(15,23,42,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-[0_24px_70px_rgba(0,146,255,0.12)]"
             >
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-md bg-sky-50 text-[#0092ff] transition-colors duration-300 group-hover:bg-[#0092ff] group-hover:text-white">

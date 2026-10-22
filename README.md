@@ -6,15 +6,15 @@ Live at **https://mythventor.github.io**
 
 ## Stack
 
-React 18 · Vite · Tailwind CSS · lucide-react
+React 19 · Vite 8 · Tailwind CSS 4 · lucide-react · pnpm
 
 ## Development
 
 ```bash
-npm install
-npm run dev      # local dev server
-npm run build    # production build into dist/
-npm run lint
+pnpm install
+pnpm dev         # local dev server
+pnpm build       # production build into dist/
+pnpm lint
 ```
 
 ## Deployment

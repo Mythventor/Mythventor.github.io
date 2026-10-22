@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink, categories = [], description }) => {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/80 bg-white/90 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-sky-200 hover:shadow-[0_24px_70px_rgba(0,146,255,0.15)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-white/80 bg-white/90 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-sky-200 hover:shadow-[0_24px_70px_rgba(0,146,255,0.15)]">
       <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
         <img
           src={img}
@@ -11,7 +11,7 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink, c
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-40" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/55 via-slate-950/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-40" />
         <div className="absolute right-4 top-4 rounded-md bg-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-lg">
           {ProgrammingLanguage}
         </div>
@@ -38,7 +38,7 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink, c
             href={ProjectLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500/30"
           >
             <FaGithub className="h-4 w-4" />
             <span>View Code</span>
@@ -48,7 +48,7 @@ const ProjectItem = ({ img, title, ProgrammingLanguage, ProjectLink, demoLink, c
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500/30"
             >
               <ExternalLink className="h-4 w-4" />
               <span>Live Demo</span>

@@ -108,7 +108,7 @@ const Work = () => {
   
   return (
     <section id="work" className="relative overflow-hidden px-6 py-24 sm:px-8 lg:px-16">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-sky-200 to-transparent" />
       <div className="mx-auto max-w-7xl">
       <div ref={sectionRef} className="mb-16 text-center opacity-0 translate-y-10 transition-all duration-700">
         <div className="flex items-center justify-center gap-3 text-blue-600">
@@ -120,17 +120,17 @@ const Work = () => {
           From student-facing platforms to dealer analytics to reliability engineering for one of the world&apos;s largest derivatives marketplaces.
         </p>
         <div className="mx-auto mt-8 grid max-w-4xl gap-3 text-left sm:grid-cols-3">
-          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-xs backdrop-blur-sm">
             <Sparkles className="mb-3 h-5 w-5 text-[#0092ff]" />
             <p className="font-semibold text-slate-950">Now at CME Group</p>
             <p className="mt-1 text-sm text-slate-600">Year-round SWE intern · SRE tooling on GCP</p>
           </div>
-          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-xs backdrop-blur-sm">
             <Building2 className="mb-3 h-5 w-5 text-emerald-600" />
             <p className="font-semibold text-slate-950">Cars Commerce</p>
             <p className="mt-1 text-sm text-slate-600">Dealer analytics and AWS deployment</p>
           </div>
-          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-sm backdrop-blur">
+          <div className="rounded-lg border border-sky-100 bg-white/80 p-4 shadow-xs backdrop-blur-sm">
             <BriefcaseBusiness className="mb-3 h-5 w-5 text-slate-600" />
             <p className="font-semibold text-slate-950">Full-stack range</p>
             <p className="mt-1 text-sm text-slate-600">React, REST APIs, PostgreSQL, CI/CD</p>
@@ -139,7 +139,7 @@ const Work = () => {
       </div>
 
       <div className="relative mx-auto max-w-5xl">
-        <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-blue-500/0 via-blue-500/60 to-blue-500/0 md:left-1/2 md:-translate-x-1/2"></div>
+        <div className="absolute left-4 top-0 h-full w-px bg-linear-to-b from-blue-500/0 via-blue-500/60 to-blue-500/0 md:left-1/2 md:-translate-x-1/2"></div>
         {data.map((item, idx) => (
           <WorkItem 
             key={idx} 

@@ -20,14 +20,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Version comes from the packageManager field in package.json
+      - uses: pnpm/action-setup@v6
+
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: npm
+          cache: pnpm
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm build
 
       - uses: actions/configure-pages@v6
 

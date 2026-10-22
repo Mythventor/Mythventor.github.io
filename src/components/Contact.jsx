@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Mail, User, Phone, MessageSquare, Send, Check, AlertTriangle, Linkedin, MapPin } from 'lucide-react';
+import { Mail, User, Phone, MessageSquare, Send, Check, AlertTriangle, MapPin } from 'lucide-react';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const CONTACT_EMAIL = 'Mengpangxing2027@u.northwestern.edu';
 
@@ -15,7 +16,7 @@ const InputField = ({ label, type, name, icon: Icon, value, onChange, error }) =
         name={name}
         value={value}
         onChange={onChange}
-        className={`w-full rounded-lg border px-4 py-3 shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 ${
+        className={`w-full rounded-lg border px-4 py-3 shadow-xs transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 ${
           error ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white focus:border-blue-500'
         }`}
         placeholder={`Enter your ${label.toLowerCase()}`}
@@ -150,7 +151,7 @@ const Contact = () => {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.4fr]">
-        <aside className="rounded-lg border border-white/80 bg-white/80 p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur">
+        <aside className="rounded-lg border border-white/80 bg-white/80 p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm">
           <h3 className="text-2xl font-bold text-slate-950">Let&apos;s build something useful.</h3>
           <p className="mt-3 leading-7 text-slate-600">
             I am especially interested in site reliability, cloud infrastructure, LLM agents, and full-stack systems that make real engineering workflows faster and safer.
@@ -159,7 +160,7 @@ const Contact = () => {
           <div className="mt-8 space-y-4">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700"
+              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700"
             >
               <Mail className="h-5 w-5 text-[#0092ff]" />
               <span className="break-all font-medium">Mengpangxing2027@u.northwestern.edu</span>
@@ -168,19 +169,19 @@ const Contact = () => {
               href="https://www.linkedin.com/in/mengpang-xing?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700"
+              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300 hover:text-blue-700"
             >
-              <Linkedin className="h-5 w-5 text-[#0092ff]" />
+              <FaLinkedinIn className="h-5 w-5 text-[#0092ff]" />
               <span className="font-medium">LinkedIn</span>
             </a>
-            <div className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm">
+            <div className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-xs">
               <MapPin className="h-5 w-5 text-[#0092ff]" />
               <span className="font-medium">Chicago / Evanston, IL</span>
             </div>
           </div>
         </aside>
 
-        <div className="overflow-hidden rounded-lg border border-white/80 bg-white/90 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur">
+        <div className="overflow-hidden rounded-lg border border-white/80 bg-white/90 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-sm">
           <div className="relative p-6 sm:p-8">
             {submitStatus === 'success' && (
               <div className="fade-in absolute inset-0 z-20 flex flex-col items-center justify-center bg-white px-6 text-center">
@@ -267,7 +268,7 @@ const Contact = () => {
                     rows="6"
                     value={formState.message}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-3 shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 ${
+                    className={`w-full rounded-lg border px-4 py-3 shadow-xs transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 ${
                       errors.message ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white focus:border-blue-500'
                     }`}
                     placeholder="Write your message here..."
@@ -285,7 +286,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group relative w-full overflow-hidden rounded-lg bg-blue-600 px-4 py-4 text-white shadow-lg shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:bg-blue-400"
+                className="group relative w-full overflow-hidden rounded-lg bg-blue-600 px-4 py-4 text-white shadow-lg shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 disabled:bg-blue-400"
               >
                 <div className="relative flex items-center justify-center gap-2">
                   {isSubmitting ? (

@@ -49,7 +49,7 @@ const WorkItem = ({ item, index, isLast }) => {
       </div>
 
       {!isLast && (
-        <div className="absolute left-4 top-14 h-[calc(100%+28px)] w-px -translate-x-1/2 bg-gradient-to-b from-sky-300 to-sky-100 md:left-1/2" />
+        <div className="absolute left-4 top-14 h-[calc(100%+28px)] w-px -translate-x-1/2 bg-linear-to-b from-sky-300 to-sky-100 md:left-1/2" />
       )}
 
       <div className={`relative w-full rounded-lg border bg-white/90 p-6 shadow-[0_20px_70px_rgba(15,23,42,0.09)] backdrop-blur-md ${item.current ? 'border-sky-200 ring-1 ring-sky-100' : 'border-white/80'} transition-all duration-300 group-hover:-translate-y-1 group-hover:border-sky-200 group-hover:shadow-[0_24px_80px_rgba(0,146,255,0.16)]`}>
